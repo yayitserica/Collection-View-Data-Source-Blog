@@ -13,33 +13,12 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     //?
-    @IBOutlet var imageView: UIImageView!
     @IBOutlet var bookLabel: UILabel!
-    @IBOutlet var spinner: UIActivityIndicatorView!
     
     //?
-    func updateCell(with image: UIImage?) {
-        if let displayImage = image {
-            spinner.stopAnimating()
-            spinner.hidesWhenStopped = true
-            imageView.image = displayImage
-        } else {
-            spinner.startAnimating()
-            imageView.image = nil
-            
-        }
+    func displayLabel(with title: String) {
+        bookLabel.text = title
     }
     
-    //?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        updateCell(with: nil)
-    }
-    
-    //?
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        updateCell(with: nil)
-    }
     
 }

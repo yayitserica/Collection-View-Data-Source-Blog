@@ -8,19 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate {
     
     //?
     @IBOutlet var collectionView: UICollectionView!
+    
+    //?
+    let bookDataSource = AudioBookDataSource()
+    
+    //?
+    let store = DataStore.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //?
+        collectionView.dataSource = bookDataSource
+        //?
+        collectionView.delegate = self
+
+        store.getBooks { (retrievedBooks) in
+            self.bookDataSource.audiobooks = retrievedBooks
+            print(self.bookDataSource.audiobooks.count)
+            self.collectionView.reloadSections(IndexSet(integer: 0))
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let book = bookDataSource.audiobooks[indexPath.row]
+        guard let photoIndex = self.bookDataSource.audiobooks.index(of: book) else { return }
+        
+        let bookIndexPath = IndexPath(item: photoIndex, section: 0)
+        if let cell = self.collectionView.cellForItem(at: bookIndexPath) as? CollectionViewCell {
+            cell.displayLabel(with: book.name)
+        }
+        self.collectionView.reloadSections(IndexSet(integer: 0))
     }
 
 

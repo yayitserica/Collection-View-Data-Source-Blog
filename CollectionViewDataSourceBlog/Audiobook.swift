@@ -20,3 +20,10 @@ struct Audiobook {
     }
     
 }
+
+extension Audiobook: Equatable {
+    static func == (lhs: Audiobook, rhs: Audiobook) -> Bool {
+        //two photos are the same if they have the same photoID
+        return lhs.name == rhs.name
+    }
+}
