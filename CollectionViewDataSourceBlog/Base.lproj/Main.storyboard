@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,25 +24,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-sM-EB3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="1O5-hs-ob1">
-                                    <size key="itemSize" width="90" height="90"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="1O5-hs-ob1">
+                                    <size key="itemSize" width="185" height="225"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="VVo-VC-9PY" customClass="CollectionViewCell" customModule="CollectionViewDataSourceBlog" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="2" width="90" height="90"/>
+                                        <rect key="frame" x="2" y="2" width="185" height="225"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70I-EI-LBy">
-                                                    <rect key="frame" x="24" y="34.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9tA-Qt-AHq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="157.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.52156862749999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="70I-EI-LBy">
+                                                    <rect key="frame" x="0.0" y="157.5" width="185" height="67.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -48,10 +54,17 @@
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="70I-EI-LBy" firstAttribute="centerY" secondItem="VVo-VC-9PY" secondAttribute="centerY" id="8Sy-vZ-mba"/>
                                             <constraint firstItem="70I-EI-LBy" firstAttribute="centerX" secondItem="VVo-VC-9PY" secondAttribute="centerX" id="GEV-cX-DdD"/>
+                                            <constraint firstItem="9tA-Qt-AHq" firstAttribute="top" secondItem="VVo-VC-9PY" secondAttribute="topMargin" constant="-8" id="XKa-E2-tpy"/>
+                                            <constraint firstItem="9tA-Qt-AHq" firstAttribute="centerX" secondItem="VVo-VC-9PY" secondAttribute="centerX" id="ZR3-Yx-Mal"/>
+                                            <constraint firstItem="70I-EI-LBy" firstAttribute="height" secondItem="VVo-VC-9PY" secondAttribute="height" multiplier="0.3" id="eL2-xu-QbE"/>
+                                            <constraint firstItem="9tA-Qt-AHq" firstAttribute="height" secondItem="VVo-VC-9PY" secondAttribute="height" multiplier="0.7" id="f1D-Ls-q3H"/>
+                                            <constraint firstItem="9tA-Qt-AHq" firstAttribute="width" secondItem="VVo-VC-9PY" secondAttribute="width" id="pAL-7J-SYW"/>
+                                            <constraint firstItem="70I-EI-LBy" firstAttribute="top" secondItem="9tA-Qt-AHq" secondAttribute="bottom" id="pkO-YD-vCd"/>
+                                            <constraint firstItem="70I-EI-LBy" firstAttribute="width" secondItem="VVo-VC-9PY" secondAttribute="width" id="wG4-kQ-lBo"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="bookImage" destination="9tA-Qt-AHq" id="vN3-lv-Dij"/>
                                             <outlet property="bookLabel" destination="70I-EI-LBy" id="d9X-5H-pcJ"/>
                                         </connections>
                                     </collectionViewCell>
@@ -61,8 +74,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TBg-sM-EB3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BhM-8B-BlM"/>
+                            <constraint firstItem="TBg-sM-EB3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="TrM-Su-kEm"/>
                             <constraint firstAttribute="trailing" secondItem="TBg-sM-EB3" secondAttribute="trailing" id="h3y-X8-Lc3"/>
-                            <constraint firstItem="TBg-sM-EB3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lHo-NA-Flh"/>
                             <constraint firstAttribute="bottom" secondItem="TBg-sM-EB3" secondAttribute="bottom" id="tsj-zg-FTn"/>
                         </constraints>
                     </view>

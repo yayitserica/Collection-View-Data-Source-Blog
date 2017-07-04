@@ -17,7 +17,7 @@
                BlueprintIdentifier = "45955F671F0AEF9600E071BC"
                BuildableName = "CollectionViewDataSourceBlog.app"
                BlueprintName = "CollectionViewDataSourceBlog"
-               ReferencedContainer = "container:CollectionViewDataSourceBlog.xcodeproj">
+               ReferencedContainer = "container:CollectionViewBlog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "45955F671F0AEF9600E071BC"
             BuildableName = "CollectionViewDataSourceBlog.app"
             BlueprintName = "CollectionViewDataSourceBlog"
-            ReferencedContainer = "container:CollectionViewDataSourceBlog.xcodeproj">
+            ReferencedContainer = "container:CollectionViewBlog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "45955F671F0AEF9600E071BC"
             BuildableName = "CollectionViewDataSourceBlog.app"
             BlueprintName = "CollectionViewDataSourceBlog"
-            ReferencedContainer = "container:CollectionViewDataSourceBlog.xcodeproj">
+            ReferencedContainer = "container:CollectionViewBlog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "45955F671F0AEF9600E071BC"
             BuildableName = "CollectionViewDataSourceBlog.app"
             BlueprintName = "CollectionViewDataSourceBlog"
-            ReferencedContainer = "container:CollectionViewDataSourceBlog.xcodeproj">
+            ReferencedContainer = "container:CollectionViewBlog.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -14,7 +14,6 @@
 		45955F761F0AEF9600E071BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45955F741F0AEF9600E071BC /* LaunchScreen.storyboard */; };
 		45955F7E1F0AF22100E071BC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F7D1F0AF22100E071BC /* APIClient.swift */; };
 		45955F801F0AF5BC00E071BC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */; };
-		45955F821F0AF82A00E071BC /* AudioBookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F811F0AF82A00E071BC /* AudioBookDataSource.swift */; };
 		45955F841F0AF8C100E071BC /* Audiobook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F831F0AF8C100E071BC /* Audiobook.swift */; };
 		45955F861F0AFA9D00E071BC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F851F0AFA9D00E071BC /* DataStore.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		45955F771F0AEF9600E071BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45955F7D1F0AF22100E071BC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		45955F811F0AF82A00E071BC /* AudioBookDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookDataSource.swift; sourceTree = "<group>"; };
 		45955F831F0AF8C100E071BC /* Audiobook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audiobook.swift; sourceTree = "<group>"; };
 		45955F851F0AFA9D00E071BC /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +66,6 @@
 				45955F6D1F0AEF9600E071BC /* ViewController.swift */,
 				45955F6F1F0AEF9600E071BC /* Main.storyboard */,
 				45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */,
-				45955F811F0AF82A00E071BC /* AudioBookDataSource.swift */,
 				45955F831F0AF8C100E071BC /* Audiobook.swift */,
 				45955F7D1F0AF22100E071BC /* APIClient.swift */,
 				45955F851F0AFA9D00E071BC /* DataStore.swift */,
@@ -116,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 45955F631F0AEF9600E071BC /* Build configuration list for PBXProject "CollectionViewDataSourceBlog" */;
+			buildConfigurationList = 45955F631F0AEF9600E071BC /* Build configuration list for PBXProject "CollectionViewBlog" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -155,7 +152,6 @@
 				45955F861F0AFA9D00E071BC /* DataStore.swift in Sources */,
 				45955F6E1F0AEF9600E071BC /* ViewController.swift in Sources */,
 				45955F6C1F0AEF9600E071BC /* AppDelegate.swift in Sources */,
-				45955F821F0AF82A00E071BC /* AudioBookDataSource.swift in Sources */,
 				45955F841F0AF8C100E071BC /* Audiobook.swift in Sources */,
 				45955F801F0AF5BC00E071BC /* CollectionViewCell.swift in Sources */,
 				45955F7E1F0AF22100E071BC /* APIClient.swift in Sources */,
@@ -308,7 +304,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		45955F631F0AEF9600E071BC /* Build configuration list for PBXProject "CollectionViewDataSourceBlog" */ = {
+		45955F631F0AEF9600E071BC /* Build configuration list for PBXProject "CollectionViewBlog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45955F781F0AEF9600E071BC /* Debug */,
@@ -324,6 +320,7 @@
 				45955F7C1F0AEF9600E071BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

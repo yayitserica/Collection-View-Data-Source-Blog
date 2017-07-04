@@ -8,42 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //?
     @IBOutlet var collectionView: UICollectionView!
     
     //?
-    let bookDataSource = AudioBookDataSource()
-    
-    //?
     let store = DataStore.sharedInstance
+    var images: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //?
-        collectionView.dataSource = bookDataSource
+        collectionView.dataSource = self
         //?
         collectionView.delegate = self
-
-        store.getBooks { (retrievedBooks) in
-            self.bookDataSource.audiobooks = retrievedBooks
-            print(self.bookDataSource.audiobooks.count)
+        
+        store.getBookImages { 
             self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
-
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        let book = bookDataSource.audiobooks[indexPath.row]
-        guard let photoIndex = self.bookDataSource.audiobooks.index(of: book) else { return }
-        
-        let bookIndexPath = IndexPath(item: photoIndex, section: 0)
-        if let cell = self.collectionView.cellForItem(at: bookIndexPath) as? CollectionViewCell {
-            cell.displayLabel(with: book.name)
-        }
-        self.collectionView.reloadSections(IndexSet(integer: 0))
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return store.audiobooks.count
     }
-
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        let book = store.audiobooks[indexPath.row]
+        cell.bookLabel.text = book.name
+        cell.bookImage.image = store.images[indexPath.row]
+        return cell
+        
+    }
 }
 

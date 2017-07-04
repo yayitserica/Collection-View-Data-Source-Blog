@@ -12,6 +12,7 @@ import UIKit
 //?
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var bookImage: UIImageView!
     //?
     @IBOutlet var bookLabel: UILabel!
     
