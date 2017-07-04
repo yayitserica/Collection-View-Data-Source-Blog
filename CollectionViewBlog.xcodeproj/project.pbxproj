@@ -46,7 +46,7 @@
 		45955F5F1F0AEF9600E071BC = {
 			isa = PBXGroup;
 			children = (
-				45955F6A1F0AEF9600E071BC /* CollectionViewDataSourceBlog */,
+				45955F6A1F0AEF9600E071BC /* CollectionViewBlog */,
 				45955F691F0AEF9600E071BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,7 +59,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		45955F6A1F0AEF9600E071BC /* CollectionViewDataSourceBlog */ = {
+		45955F6A1F0AEF9600E071BC /* CollectionViewBlog */ = {
 			isa = PBXGroup;
 			children = (
 				45955F6B1F0AEF9600E071BC /* AppDelegate.swift */,
@@ -73,7 +73,7 @@
 				45955F741F0AEF9600E071BC /* LaunchScreen.storyboard */,
 				45955F771F0AEF9600E071BC /* Info.plist */,
 			);
-			path = CollectionViewDataSourceBlog;
+			path = CollectionViewBlog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,11 +278,10 @@
 		45955F7B1F0AEF9600E071BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
-				INFOPLIST_FILE = CollectionViewDataSourceBlog/Info.plist;
+				INFOPLIST_FILE = CollectionViewBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.CollectionViewDataSourceBlog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.CollectionViewBlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -291,11 +290,10 @@
 		45955F7C1F0AEF9600E071BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
-				INFOPLIST_FILE = CollectionViewDataSourceBlog/Info.plist;
+				INFOPLIST_FILE = CollectionViewBlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.CollectionViewDataSourceBlog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.CollectionViewBlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
