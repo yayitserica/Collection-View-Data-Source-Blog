@@ -1,6 +1,6 @@
 //
 //  DataStore.swift
-//  CollectionViewDataSourceBlog
+//  CollectionViewBlog
 //
 //  Created by Erica Millado on 7/3/17.
 //  Copyright © 2017 Erica Millado. All rights reserved.

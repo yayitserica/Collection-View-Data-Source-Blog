@@ -64,11 +64,14 @@
                                             <constraint firstItem="70I-EI-LBy" firstAttribute="width" secondItem="VVo-VC-9PY" secondAttribute="width" id="wG4-kQ-lBo"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="bookImage" destination="9tA-Qt-AHq" id="vN3-lv-Dij"/>
+                                            <outlet property="bookImage" destination="9tA-Qt-AHq" id="Hlh-tW-Jki"/>
                                             <outlet property="bookLabel" destination="70I-EI-LBy" id="d9X-5H-pcJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gA8-1i-4kA"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -43,6 +43,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454BE1B41F0C154200B9FF55 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				45955F7D1F0AF22100E071BC /* APIClient.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		454BE1B51F0C155200B9FF55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45955F831F0AF8C100E071BC /* Audiobook.swift */,
+				45955F851F0AFA9D00E071BC /* DataStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		454BE1B61F0C155900B9FF55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45955F741F0AEF9600E071BC /* LaunchScreen.storyboard */,
+				45955F6F1F0AEF9600E071BC /* Main.storyboard */,
+				45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		454BE1B71F0C156800B9FF55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45955F6D1F0AEF9600E071BC /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		45955F5F1F0AEF9600E071BC = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				45955F6B1F0AEF9600E071BC /* AppDelegate.swift */,
-				45955F6D1F0AEF9600E071BC /* ViewController.swift */,
-				45955F6F1F0AEF9600E071BC /* Main.storyboard */,
-				45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */,
-				45955F831F0AF8C100E071BC /* Audiobook.swift */,
-				45955F7D1F0AF22100E071BC /* APIClient.swift */,
-				45955F851F0AFA9D00E071BC /* DataStore.swift */,
+				454BE1B71F0C156800B9FF55 /* Controller */,
+				454BE1B61F0C155900B9FF55 /* View */,
+				454BE1B51F0C155200B9FF55 /* Model */,
+				454BE1B41F0C154200B9FF55 /* Networking */,
 				45955F721F0AEF9600E071BC /* Assets.xcassets */,
-				45955F741F0AEF9600E071BC /* LaunchScreen.storyboard */,
 				45955F771F0AEF9600E071BC /* Info.plist */,
 			);
 			path = CollectionViewBlog;

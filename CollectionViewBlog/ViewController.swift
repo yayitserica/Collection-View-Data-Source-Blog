@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CollectionViewDataSourceBlog
+//  CollectionViewBlog
 //
 //  Created by Erica Millado on 7/3/17.
 //  Copyright © 2017 Erica Millado. All rights reserved.
@@ -8,21 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource {
     
-    //?
     @IBOutlet var collectionView: UICollectionView!
     
-    //?
     let store = DataStore.sharedInstance
-    var images: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //?
-        collectionView.dataSource = self
-        //?
-        collectionView.delegate = self
         
         store.getBookImages { 
             self.collectionView.reloadSections(IndexSet(integer: 0))
@@ -34,10 +27,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        
         let book = store.audiobooks[indexPath.row]
-        cell.bookLabel.text = book.name
-        cell.bookImage.image = store.images[indexPath.row]
+        
+        cell.displayContent(image: store.images[indexPath.row], title: book.name)
+
         return cell
         
     }
