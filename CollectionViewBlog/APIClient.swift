@@ -14,7 +14,7 @@ struct APIClient {
     
     static func getAudiobooksAPI(completion: @escaping (AudiobookJSON?) -> Void) {
         
-        let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/audiobooks/top-audiobooks/10/explicit/json")
+        let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/audiobooks/top-audiobooks/all/10/explicit.json")
         
         let session = URLSession.shared
         
